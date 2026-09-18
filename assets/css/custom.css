@@ -1,0 +1,159 @@
+/*
+	Kişisel eklemeler — Strata'nın main.css'i bozulmasın diye ayrı dosyada tutuluyor.
+	Şablon güncellenirse sadece bu dosya taşınır.
+*/
+
+/* ---------------------------------------------------------------
+   1. İki dillilik
+   HTML'de her metnin iki kopyası var: lang="tr" ve lang="en".
+   Sayfanın dili <html data-lang="..."> ile belirleniyor,
+   diğer dildeki kopyalar burada gizleniyor.
+   --------------------------------------------------------------- */
+
+html[data-lang="tr"] [lang="en"],
+html[data-lang="en"] [lang="tr"] {
+	display: none !important;
+}
+
+/* Dil değiştirme butonu */
+#lang-toggle {
+	position: fixed;
+	top: 1.25em;
+	right: 1.25em;
+	z-index: 10000;
+	min-width: 3.25em;
+	padding: 0.5em 0.9em;
+	border: 0;
+	border-radius: 0.35em;
+	background-color: #1f1815;
+	color: #fff;
+	font-family: 'Source Sans Pro', Helvetica, sans-serif;
+	font-size: 0.8em;
+	font-weight: 600;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	cursor: pointer;
+	opacity: 0.85;
+	transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+#lang-toggle:hover,
+#lang-toggle:focus-visible {
+	background-color: #49bf9d;
+	opacity: 1;
+}
+
+/* ---------------------------------------------------------------
+   2. Teknoloji etiketleri
+   --------------------------------------------------------------- */
+
+ul.tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6em;
+	margin: 0 0 2em 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul.tags li {
+	margin: 0;
+	padding: 0.45em 0.9em;
+	border: 1px solid #dfdfdf;
+	border-radius: 0.35em;
+	background-color: #f7f7f7;
+	color: #636363;
+	font-family: 'Source Sans Pro', Helvetica, sans-serif;
+	font-size: 0.8em;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------
+   3. Proje kartları
+   Ekran görüntüleri farklı oranlarda; hepsini aynı 4:3 kutuya
+   oturtarak ızgarayı hizalı tutuyoruz.
+   --------------------------------------------------------------- */
+
+#two .work-item .thumb img {
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	background-color: #1f1815;
+}
+
+#two .work-item h3 {
+	margin-bottom: 0.5em;
+}
+
+/* Mağaza / durum butonları — kart içinde dar alana sığması için küçültülmüş */
+ul.actions.store {
+	flex-wrap: wrap;
+	row-gap: 0.8em;
+	margin-bottom: 0;
+}
+
+ul.actions.store .button {
+	min-width: 0;
+	padding: 0 1.1em;
+	border-width: 2px;
+	height: calc(2.75em + 4px);
+	font-size: 0.7em;
+}
+
+ul.actions.store .button.icon {
+	padding-left: 1em;
+}
+
+/* "Yakında" — tıklanamaz olduğu belli olsun */
+ul.actions.store .button.disabled {
+	cursor: default;
+	pointer-events: none;
+}
+
+/* TÜBİTAK rozeti — buton değil, bir durum etiketi */
+ul.actions.store .button.badge {
+	border-color: #49bf9d;
+	color: #49bf9d !important;
+	background-color: rgba(73, 191, 157, 0.07);
+	cursor: default;
+}
+
+/* Dar ekranda butonlar alt alta değil, yan yana kalsın */
+@media screen and (max-width: 480px) {
+
+	#two ul.actions.store:not(.fixed) {
+		flex-direction: row;
+		width: auto !important;
+	}
+
+		#two ul.actions.store:not(.fixed) li {
+			flex-grow: 0;
+			padding: 0 0 0 1em;
+			width: auto;
+		}
+
+			#two ul.actions.store:not(.fixed) li > * {
+				width: auto;
+			}
+
+}
+
+/* ---------------------------------------------------------------
+   4. Küçük düzeltmeler
+   --------------------------------------------------------------- */
+
+/* İletişim listesindeki bağlantılar için biraz daha nefes payı */
+#three .labeled-icons li {
+	padding-bottom: 1.35em;
+}
+
+@media screen and (max-width: 736px) {
+
+	#lang-toggle {
+		top: 0.75em;
+		right: 0.75em;
+		font-size: 0.75em;
+	}
+
+}
