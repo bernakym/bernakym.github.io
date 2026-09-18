@@ -1,6 +1,6 @@
-# bernakayim.github.io
+# bernakym.github.io
 
-Berna Kayım'ın kişisel sitesi. Canlı: **https://bernakayim.github.io**
+Berna Kayım'ın kişisel sitesi. Canlı: **https://bernakym.github.io**
 
 Tasarım [Strata — HTML5 UP](https://html5up.net/strata) (CCA 3.0) üzerine kurulu;
 iki dillilik, etiketler ve proje kartları `gokberkdokmen.github.io` sitesindeki
@@ -64,6 +64,6 @@ python -m http.server 8000
 
 ## Yayına alma
 
-1. GitHub'da `bernakayim` hesabı altında `bernakayim.github.io` adında bir depo aç.
-2. `git remote add origin https://github.com/bernakayim/bernakayim.github.io.git`
+1. GitHub'da `bernakym` hesabı altında `bernakym.github.io` adında bir depo aç.
+2. `git remote add origin https://github.com/bernakym/bernakym.github.io.git`
 3. `git push -u origin main` — Pages otomatik olarak `main` dalından yayınlar.
