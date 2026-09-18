@@ -93,12 +93,12 @@
 
 			}
 
-	// Main Sections: Two.
+	// Main Sections: lightbox.
 
 		// Lightbox gallery.
 			$window.on('load', function() {
 
-				$('#two').poptrox({
+				$('#main').poptrox({
 					caption: function($a) { return $a.nextAll('h3:visible').first().text(); },
 					overlayColor: '#2c2c2c',
 					overlayOpacity: 0.85,
