@@ -305,3 +305,42 @@ ul.plain li:last-child {
 		}
 
 }
+
+/* ---------------------------------------------------------------
+   8. Proje kartları
+   Ekran görüntüleri farklı oranlarda; hepsini aynı 4:3 kutuya
+   oturtarak ızgarayı hizalı tutuyoruz.
+   --------------------------------------------------------------- */
+
+#work .work-item .thumb img {
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	background-color: #1f1815;
+}
+
+#work .work-item h3 {
+	margin-bottom: 0.35em;
+	font-size: 0.95em;
+}
+
+/* Yıl + tür satırı */
+#work .work-item .meta {
+	display: block;
+	margin-bottom: 0.9em;
+	color: #999;
+	font-family: 'Source Sans Pro', Helvetica, sans-serif;
+	font-size: 0.75em;
+	font-weight: 600;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+}
+
+#work .work-item p {
+	font-size: 0.9em;
+}
+
+/* Proje numarası başlığın önünde soluk dursun */
+#work .work-item h3 .no {
+	color: #bbb;
+	font-weight: 400;
+}

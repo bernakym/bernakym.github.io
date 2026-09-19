@@ -5,7 +5,7 @@ Berna Kayım'ın kişisel sitesi. Canlı: **https://bernakym.github.io**
 Tasarım [Strata — HTML5 UP](https://html5up.net/strata) (CCA 3.0) üzerine kurulu;
 iki dillilik, etiketler, zaman çizelgesi ve dil çubukları sonradan eklendi.
 
-> **Durum:** CV içeriği işlendi. Portfolyo projeleri henüz eklenmedi.
+> **Durum:** CV ve portfolyo işlendi — 18 proje yayında.
 
 ## Yapı
 
@@ -17,6 +17,7 @@ assets/js/lang.js        TR/EN dil değiştirici
 assets/js/main.js        şablonun scripti — lightbox #two yerine #main'e bağlandı
 images/avatar.jpg        profil görseli (CV'den kırpıldı)
 images/og-profil.jpg     link önizleme görseli
+images/work/             proje görselleri (*-thumb.jpg kartta, diğeri lightbox'ta)
 .nojekyll                GitHub Pages'in Jekyll işlemesini atlaması için
 ```
 
@@ -26,6 +27,7 @@ images/og-profil.jpg     link önizleme görseli
 |----|-------|
 | `header` | İsim ve tek cümlelik tanıtım |
 | `#one` | Hakkımda, kullanılan programlar, yabancı dil |
+| `#work` | Projeler — 18 kart, lightbox'ta tam pafta |
 | `#two` | Deneyim (stajlar) ve yetkinlikler |
 | `#three` | Eğitim, sertifikalar, ilgi alanları |
 | `#four` | İletişim |
@@ -46,13 +48,17 @@ saklanıyor; ilk ziyarette tarayıcı diline göre karar veriliyor.
 **Yeni metin eklerken iki dili de yazmayı unutma** — tek dilli bir etiket her iki
 görünümde de aynı kalır.
 
-## Portfolyo projesi ekleme (sonraki adım)
+## Yeni proje ekleme
 
-1. Görselleri `images/work/` altına koy: `proje-thumb.jpg` (800×600) ve
-   `proje.jpg` (en fazla 1400px genişlik).
-2. Yeni bir `<section>` aç, içine `class="work-item"` taşıyan `<article>` blokları koy.
+1. Görselleri `images/work/` altına koy: `proje-thumb.jpg` (800×600, karttaki
+   görsel) ve `proje.jpg` (en fazla 1400px, lightbox'ta açılan tam pafta).
+2. `#work` bölümündeki bir `<article class="work-item">` bloğunu kopyalayıp düzenle.
 3. Lightbox `#main` içindeki `.work-item a.image` bağlantılarını otomatik yakalar —
    ek ayar gerekmiyor.
+
+Mevcut görseller `BernaKayım-Portfolyo.pdf` dosyasından üretildi: kart görseli
+ilgili sayfadan metin kolonu ve alt bant dışarıda kalacak şekilde kırpıldı,
+lightbox görseli ise projenin açıklama sayfasının tamamı.
 
 ## Siteye bilerek konmayan bilgiler
 
